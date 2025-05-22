@@ -1,0 +1,367 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white; 
+    color: #3a3a3a;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  
+  header {
+    background: skyblue;
+    position: relative;
+    padding: 3rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    color: #3a3a3a;
+    font-weight: 700;
+    
+  }
+
+  
+  header p {
+    font-size: 1.3rem;
+    color: #666;
+    margin-top: 0.6rem;
+  }
+  
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+  
+}
+  nav {
+   
+    background: #ffffff;
+    padding: 1rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #555;
+    margin: 0 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.25s ease;
+  }
+  
+  nav a:hover {
+    color: #1e90ff;
+  }
+  
+  
+  #featured {
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  #featured h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+ 
+  .cities-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  
+  
+  .city-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .city-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+  }
+  
+  .city-card h3 {
+    
+    font-family: 'Noto Serif', serif;
+    font-size: 1.4rem;
+    color: #222;
+    margin: 1rem;
+  }
+  
+  .city-card p {
+    margin: 0 1rem 1.5rem 1rem;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .city-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .city-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 28px rgba(30, 144, 255, 0.25); 
+  }
+  
+  .city-card:hover img {
+    transform: scale(1.05);
+  }
+  
+ 
+  @media (max-width: 480px) {
+    nav a {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+  footer {
+    margin-top: 2rem;
+    
+    background-color: skyblue;
+    color: white;
+    height: 50px;
+    text-align: center;
+    padding: 1rem;
+  }
+  #search-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+ #search-form {
+    display: flex;
+    align-items: center;
+  }
+  
+  #search-form input[type="text"] {
+    padding: 5px 8px;
+    font-size: 14px;
+    width: 120px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    
+  }
+  
+  #search-form button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    font-size: 14px;
+    border: none;
+    background-color: skyblue;
+    color: black;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  #search-form button:hover {
+    background-color: white;
+  }
+  
+  
+
+#gallery {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+#gallery h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.gallery-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.gallery-card h3 {
+  font-family: 'Noto Serif', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1e1e1e;
+  
+}
+
+.gallery-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.img-placeholder {
+  background-color: #dcdcdc;
+  height: 160px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 28px rgba(30, 144, 255, 0.25);
+}
+.gallery-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px; 
+  border-radius: 12px;
+}
+#city {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fefefe;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.city-of-day {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-placeholder.large {
+  width: 100%;
+  max-width: 5005px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.img-placeholder.large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.city-info {
+  text-align: center;
+}
+
+.city-info h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.city-info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  line-height: 1.6;
+}
+#submit {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fefefe;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+#submit h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.submit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.submit-form label {
+  font-weight: 600;
+  color: #444;
+}
+
+.submit-form input,
+.submit-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.submit-form textarea {
+  resize: vertical;
+}
+
+.submit-form button {
+  background-color: skyblue;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-form button:hover {
+  background-color: #1e90ff;
+}
